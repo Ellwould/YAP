@@ -30,8 +30,8 @@ fi;
 
 # Values for variables
 
-printf "\n Please enter ZFS zpool name (default is zpool) \n";
-read -p "ZFS zpool name: " zfsZpoolName;
+printf "\n   Please enter ZFS zpool name (default is zpool) \n\n";
+read -p "   ZFS zpool name: " zfsZpoolName;
 
 ######################################################################
 
