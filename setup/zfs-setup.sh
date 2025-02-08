@@ -48,7 +48,7 @@ printf "   If this is the first primary server maybe name it a1.\n";
 printf "   If this is the first failover server for a1 maybe name it a2.\n\n";
 printf "   Choosing a naming convention is important if you plan to \n\n";
 printf "   run multiple YAP servers in a primary and failover setup.\n\n";
-printf "   Table showing an example of a server naming convention:\n";
+printf "   ${BoldGreen}Table showing an example of a server naming convention:\n";
 printf "     _________________________________________________________________\n";
 printf "    / IPv4 Address | IPv6 Address  | Primary Server | Failover Server \ \n";
 printf "   |---------------|---------------|----------------|------------------|\n";
@@ -59,7 +59,7 @@ printf "   |---------------|---------------|----------------|------------------|
 printf "   |   192.0.2.3   |  2001:db8::3  |       c1       |        c2        |\n";
 printf "   |---------------|---------------|----------------|------------------|\n";
 printf "   |      ...      |      ...      |       ...      |        ...       |\n";
-printf "   |---------------|---------------|----------------|------------------|\n\n";
+printf "   |---------------|---------------|----------------|------------------|${CE}\n\n";
 read -p "   Server Name: " serverName;
 if [[ $serverName == "" ]]
 then
