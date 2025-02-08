@@ -49,7 +49,7 @@ printf "   failover server for a1 maybe name it a2.\n\n";
 printf "   Choosing a naming convention is important if you plan to \n\n";
 printf "   run multiple YAP servers in a primary and failover setup.\n\n";
 printf "      ______________________________________________________________\n";
-printf "    / IPv4 Address | IPv6 Address  | Primary Server | Failover Server \\\n";
+printf "    / IPv4 Address | IPv6 Address  | Primary Server | Failover Server \ \n";
 printf "   |---------------|---------------|----------------|------------------|\n";
 printf "   |   192.0.2.1   |  2001:db8::1  |       a1       |        a2        |\n";
 printf "   |---------------|---------------|----------------|------------------|\n";
