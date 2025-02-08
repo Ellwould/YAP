@@ -4,11 +4,21 @@
 
 ######################################################################
 
+# Text Colours
+
+Green='\033[0;32m'     # Text Green
+BoldGreen='\033[1;32m' # Text Bold Green
+Red='\033[0;31m'       # Text Red
+BoldRed='\033[1;31m'   # Text Bold Red
+CE='\033[0m'           # Colour End
+
+######################################################################
+
 # Check if user is root otherwise exit
 
 if [ "$EUID" -ne 0 ]
 then
-  printf "\nPlease run as root\n\n";
+  printf "\n   ${BoldRed}[WARNING: Must be root user to run script]${CE}   \n\n";
   exit;
 fi;
 
@@ -20,9 +30,9 @@ cd /root;
 
 if [ ! -d "/root/YAP" ]
 then
-  printf "\nYAP repository does not exist in /root.\n";
-  printf "Please run: \"cd /root; git clone https://github.com/Ellwould/YAP\"\n";
-  printf "and run zfs-setup.sh script again\n\n";
+  printf "\n   ${BoldRed}[WARNING: YAP repository does not exist in /root.\n";
+  printf "             Please run: \"cd /root; git clone https://github.com/Ellwould/YAP\"\n";
+  printf "             and run zfs-setup.sh script again]${CE}\n\n";
   exit;
 fi;
 
@@ -30,8 +40,18 @@ fi;
 
 # Values for variables
 
+function zfsZpoolName () {
+
 printf "\n   Please enter ZFS zpool name (default is zpool) \n\n";
-read -p "   ZFS zpool name: " zfsZpoolName;
+read -p "   ZFS zpool name: " zpoolName;
+if [[ $zpoolName == "" ]]
+then
+  printf "\n\n   ${BoldRed}[WARNING: ZFS zpool name cannot be blank]${CE}\n\n";
+  zfsZpoolName;
+fi;
+}
+
+zfsZpoolName
 
 ######################################################################
 
