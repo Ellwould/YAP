@@ -40,6 +40,26 @@ fi;
 
 # Values for variables
 
+function freebsdServerName () {
+printf "\n   Please enter a server name. If this is\n\n";
+printf "   the first primary server maybe name it a1. If this is the first\n";
+printf "   failover server for a1 maybe name it a2.\n\n";
+printf "   Choosing a naming convention is important if you plan to \n\n";
+printf "   run multiple YAP servers in a primary and failover setup.\n\n";
+printf "      ______________________________________________________________;
+printf "    / IPv4 Address | IPv6 Address | Primary Server | Failover Server \;
+printf "   |---------------|--------------|----------------|------------------|;
+printf "   |   192.0.2.1   |              |       a1       |        a2        |;
+printf "   |---------------|--------------|----------------|------------------|;
+printf "   |   192.0.2.2   |              |       b1       |        b2        |;
+printf "   |---------------|--------------|----------------|------------------|;
+printf "   |   192.0.2.3   |              |       c1       |        c2        |;
+printf "   |---------------|--------------|----------------|------------------|;
+printf "   |      ...      |      ...     |       ...      |        ...       |
+printf "   |---------------|--------------|----------------|------------------|;
+fi;
+}
+
 function zfsZpoolName () {
 
 printf "\n   Please enter ZFS zpool name (default is zpool) \n\n";
