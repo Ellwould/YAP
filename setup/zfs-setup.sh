@@ -109,7 +109,7 @@ then
   printf "\n\n   ${BoldRed}[WARNING: Number cannot be blank]${CE}\n\n";
   pbxServerQuantity;
 fi;
-if [[ $pbxQuantity > 47 ]]
+if [[ $pbxQuantity > "47" ]]
 then
   printf "\n\n   ${BoldRed}[WARNING: Number cannot excede 47]${CE}\n\n";
   pbxServerQuantity;
