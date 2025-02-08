@@ -6,11 +6,19 @@
 
 # Text Colours
 
-Green='\033[0;32m'     # Text Green
-BoldGreen='\033[1;32m' # Text Bold Green
-Red='\033[0;31m'       # Text Red
-BoldRed='\033[1;31m'   # Text Bold Red
-CE='\033[0m'           # Colour End
+Blue='\033[0;34m'        # Text Blue
+BoldBlue='\033[1;34m'    # Text Bold Blue
+Cyan='\033[0;36m'        # Text Cyan
+BoldCyan='\033[1;36m'    # Text Bold Cyan
+Green='\033[0;32m'       # Text Green
+BoldGreen='\033[1;32m'   # Text Bold Green
+Red='\033[0;31m'         # Text Red
+BoldRed='\033[1;31m'     # Text Bold Red
+Purple='\033[0;35m'      # Text Purple
+BoldPurple='\033[1;35m'  # Text Bold Purple
+Yellow='\033[0;33m'      # Text Yellow
+BoldYellow='\033[1;33m'  # Text Bold Yellow
+CE='\033[0m'             # Colour End
 
 ######################################################################
 
