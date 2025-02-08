@@ -95,14 +95,38 @@ fi;
 
 zfsZpoolName
 
+
+
+# Function for PBX Quantity Needed
+
+function pbxServerQuantity () {
+
+printf "\n   Please enter the number of PBX server's required [Between 1-47]\n";
+printf "\n   Additional PBX server's can be added later \n\n";
+read -p "   PBX Server's Needed [1-47]: " pbxQuantity;
+if [[ $pbxQuantity == "" ]]
+then
+  printf "\n\n   ${BoldRed}[WARNING: Number cannot be blank]${CE}\n\n";
+  pbxServerQuantity;
+if [[ $pbxQuantity > 47 ]]
+then
+  printf "\n\n   ${BoldRed}[WARNING: Number cannot excede 47]${CE}\n\n";
+  pbxServerQuantity;
+fi;
+if [[ $pbxQuantity < 1 ]]
+then
+  printf "\n\n   ${BoldRed}[WARNING: Number cannot be below 1]${CE}\n\n";
+  pbxServerQuantity;
+fi;
+}
+
 ######################################################################
 
 # Loop to create ZFS Datasets
 
-a=4*1000
-for (( startPort=2000; startPort <= $a; int+=1000));
+for (( startPort=2000; startPort <= (($pbxQuantity+1)*1000); startPort+=1000));
 do
-zfs create $zpoolName/jails/$serverName+"_voip_jail_"+$startPort;
+zfs create $zpoolName/jails/$serverName"_voip_jail_"$startPort;
 done
 
 
