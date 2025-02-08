@@ -58,7 +58,7 @@ printf "   Choosing a naming convention is important if you plan to \n\n";
 printf "   run multiple YAP servers in a primary and failover setup.\n\n";
 printf "   ${BoldGreen}Table showing an example of a server naming convention:\n";
 printf "     _________________________________________________________________\n";
-printf "    / IPv4 Address | IPv6 Address  | Primary Server | Failover Server \ \n";
+printf "    / ${BoldCyan}IPv4 Address${CE} | IPv6 Address  | Primary Server | Failover Server \ \n";
 printf "   |---------------|---------------|----------------|------------------|\n";
 printf "   |   192.0.2.1   |  2001:db8::1  |       a1       |        a2        |\n";
 printf "   |---------------|---------------|----------------|------------------|\n";
