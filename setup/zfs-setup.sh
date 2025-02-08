@@ -1,5 +1,7 @@
 #!/usr/local/bin/bash
 
+# YAP ZFS Setup Script
+
 ######################################################################
 
 # Check if user is root otherwise exit
