@@ -43,11 +43,12 @@ fi;
 # Function for Server Name Variable
 
 function freebsdServerName () {
-printf "\n   Please enter a server name. If this is\n\n";
-printf "   the first primary server maybe name it a1. If this is the first\n";
-printf "   failover server for a1 maybe name it a2.\n\n";
+printf "\n   Please enter a server name.\n\n";
+printf "   If this is the first primary server maybe name it a1.\n";
+printf "   If this is the first failover server for a1 maybe name it a2.\n\n";
 printf "   Choosing a naming convention is important if you plan to \n\n";
 printf "   run multiple YAP servers in a primary and failover setup.\n\n";
+printf "   Table showing an example of a server naming convention:\n";
 printf "     _________________________________________________________________\n";
 printf "    / IPv4 Address | IPv6 Address  | Primary Server | Failover Server \ \n";
 printf "   |---------------|---------------|----------------|------------------|\n";
