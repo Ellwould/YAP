@@ -57,17 +57,17 @@ printf "   If this is the first failover server for a1 maybe name it a2.\n\n";
 printf "   Choosing a naming convention is important if you plan to \n\n";
 printf "   run multiple YAP servers in a primary and failover setup.\n\n";
 printf "   ${BoldCyan}Table showing an example of a server naming convention:\n";
-printf "     _________________________________________________________________\n";
-printf "    / IPv4 Address | IPv6 Address  | Primary Server | Failover Server \ \n";
-printf "   |---------------|---------------|----------------|------------------|\n";
-printf "   |   192.0.2.1   |  2001:db8::1  |       a1       |        a2        |\n";
-printf "   |---------------|---------------|----------------|------------------|\n";
-printf "   |   192.0.2.2   |  2001:db8::2  |       b1       |        b2        |\n";
-printf "   |---------------|---------------|----------------|------------------|\n";
-printf "   |   192.0.2.3   |  2001:db8::3  |       c1       |        c2        |\n";
-printf "   |---------------|---------------|----------------|------------------|\n";
-printf "   |      ...      |      ...      |       ...      |        ...       |\n";
-printf "   |---------------|---------------|----------------|------------------|${CE}\n\n";
+printf "     _____________________________________________________________\n";
+printf "    /      FQDN        |   Primary Server   |    Failover Server   \ \n";
+printf "   |-------------------|--------------------|-----------------------|\n";
+printf "   |   a.example.com   |         a1         |           a2          |\n";
+printf "   |-------------------|--------------------|-----------------------||\n";
+printf "   |   b.example.com   |         b1         |           b2          |\n";
+printf "   |-------------------|--------------------|-----------------------|\n";
+printf "   |   c.example.com   |         c1         |           c2          |\n";
+printf "   |-------------------|--------------------|-----------------------|\n";
+printf "   |        ...        |         ...        |           ...         |\n";
+printf "   |-------------------|--------------------|-----------------------|${CE}\n\n";
 read -p "   Server Name: " serverName;
 if [[ $serverName == "" ]]
 then
