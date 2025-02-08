@@ -97,5 +97,12 @@ zfsZpoolName
 
 ######################################################################
 
-# Delete any that are not needed (47 in total)
+# Loop to create ZFS Datasets
+
+a=4*1000
+for (( startPort=2000; startPort <= $a; int+=1000));
+do
+zfs create $zpoolName/jails/$serverName+"_voip_jail_"+$startPort;
+done
+
 
