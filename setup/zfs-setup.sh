@@ -14,5 +14,17 @@ cd /root;
 
 ######################################################################
 
+# Check YAP repository has been downloaded from GitHub and in the /root directory
+
+if [ ! -d "/root/YAP" ]
+then
+  printf "\nYAP repository does not exist in /root.\n";
+  printf "Please run: \"cd /root; git clone https://github.com/Ellwould/YAP\"\n";
+  printf "and run zfs-setup.sh script again\n\n";
+  exit;
+fi;
+
+######################################################################
+
 # Delete any that are not needed (47 in total)
 
