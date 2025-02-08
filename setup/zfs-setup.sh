@@ -40,6 +40,8 @@ fi;
 
 # Values for variables
 
+# Function for Server Name Variable
+
 function freebsdServerName () {
 printf "\n   Please enter a server name. If this is\n\n";
 printf "   the first primary server maybe name it a1. If this is the first\n";
@@ -58,8 +60,14 @@ printf "   |---------------|---------------|----------------|------------------|
 printf "   |      ...      |      ...      |       ...      |        ...       |\n";
 printf "   |---------------|---------------|----------------|------------------|\n\n";
 read -p "   Server Name: " serverName;
-fi;
+#fi;
 }
+
+freebsdServerName
+
+
+
+# Function for ZFS Zpool Name Variable
 
 function zfsZpoolName () {
 
