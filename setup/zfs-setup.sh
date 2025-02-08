@@ -28,5 +28,12 @@ fi;
 
 ######################################################################
 
+# Values for variables
+
+printf "\n Please enter ZFS zpool name (default is zpool) \n";
+read -p "ZFS zpool name: " zfsZpoolName;
+
+######################################################################
+
 # Delete any that are not needed (47 in total)
 
